@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Poppins&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      font-family: Outfit, sans-serif;
+      
+    }
+    body {
+      background-color: hsl(217, 54%, 11%);
+      display: flex;
+      height: 100vh;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .container {
+      background-color: hsl(216, 50%, 16%);
+      border-radius: 15px;
+      height: 700px;
+      width: 420px;
+      position: relative;
+      
+    }
+
+    .image {
+      position: relative;
+    }
+
+    .image__overlay {
+      position:absolute;
+      top: 30px;
+      left: 30px;
+      width: 360px;
+      height: 360px;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      background: hsla(178, 100%, 50%, 0.5);
+      transition: opacity 0.25s;
+    }
+
+    .image__overlay:hover {
+      opacity: 1;
+    }
+
+    .image__overlay--blur {
+      backdrop-filter: blur(5px);
+    }
+
+    .image__img {
+      display: absolute;
+      width: 360px;
+      height: 360px;
+      margin: 30px;
+      border-radius: 15px;
+      /*position: absolute;*/
+    }
+
+    .eye {
+      width: 50px;
+      height: 50px;
+    }
+    .description {
+      /* position: absolute; */
+      /* top: 400px;
+      left: 30px;
+      right: 30px; */
+      margin: 0 30px;
+    }
+    h2 {
+      color: hsl(0, 0%, 100%);
+      margin: 0;
+      margin-bottom: 15px;
+    }
+    p {
+      color: hsl(215, 51%, 70%);  
+      font-size: 18px;
+      margin: 0;
+    }
+    .price {
+      display: flex;
+      position: relative;
+      height: 80px;
+      align-items: center;
+      margin: 0 30px 0 30px;
+      border-bottom: 1px solid hsl(215, 32%, 27%);
+    }
+    .eth-price {
+      position: abosute;
+      display: flex;
+      width: 50%;
+      
+    }
+    .eth {
+      font-weight: 600;
+      color: hsl(178, 100%, 50%);
+    }
+    .eth-logo {
+      width: 15px;
+      height: 25px;
+      margin: 0 5px 0 0;
+    }
+
+    .time {
+      display: flex;
+    }
+    .clock{
+      width: 20px;
+      height: 20px;
+      margin: 0 5px 0 70px;
+    }
+    .days-left{
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .avatar-container {
+      display: flex;
+      align-items: center;
+      margin: 30px;
+    }
+    .avatar{
+      height: 40px;
+      width: 40px;
+      border: 0.5px solid hsl(0, 0%, 100%);
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .creator {
+      color: hsl(215, 51%, 70%);
+      font-size: 18px;
+    }
+
+    a:link, a:visited{
+      color: hsl(0, 0%, 100%);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: hsl(178, 100%, 50%);
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="image">
+      <img class="image__img" src="./images/image-equilibrium.jpg" alt="equilibrium"/>
+      <a href="#creator"><div class="image__overlay image__overlay--primary">
+        <div class="image__view"><img class="eye" src="./images/icon-view.svg"></div>
+      </div></a>
+    </div>
+    
+    <div class="description">
+      <h2><a href="#creator">Equilibrium #3429</a></h2> 
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+    </div>
+    <div class="price">
+      <div class="eth-price">
+        <img class="eth-logo" src="./images/icon-ethereum.svg" alt="eth-logo"/>
+        <p class="eth">0.041 ETH</p>
+      </div>
+      <div class="time">
+        <img class="clock" src="./images/icon-clock.svg" alt="clock"/>
+        <p class="days-left">3 days left</p>
+      </div>
+    </div>
+    <div class="avatar-container">
+      <img class="avatar" src="./images/image-avatar.png" alt="avatar"/>
+      <div class="creator">Creation of <a href="#creator">Jules Wyvern</a></div>  
+    </div>
+  </div>
+
+
+
+ 
+</body>
+</html>
